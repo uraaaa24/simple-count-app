@@ -1,4 +1,4 @@
-import { Button } from "@mui/material"
+import { Box, Button, Paper, Typography } from "@mui/material"
 import { useState } from 'react'
 import './App.css'
 
@@ -9,12 +9,16 @@ function App() {
   }
 
   return (
-    <>
-      {count}
-      <Button onClick={countUp}>
-        ボタン
-      </Button>
-    </>
+    <Paper sx={{ p: 10 }}>
+      <Box bgcolor={"red"} sx={{ p: 2 }}>
+        <Typography variant="body1" >
+          {count}
+        </Typography>
+        <Button variant="contained" onClick={countUp}>
+          ボタン
+        </Button>
+      </Box>
+    </Paper>
   )
 }
 
